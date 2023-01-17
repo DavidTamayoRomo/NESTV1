@@ -6,6 +6,7 @@ import { OrganizationModule } from './modules/organization/organization.module';
 import { TribeModule } from './modules/tribe/tribe.module';
 import { DatabaseModule } from './database/database.module';
 import { RepositoryModule } from './modules/repository/repository.module';
+import { MetricModule } from './modules/metric/metric.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { RepositoryModule } from './modules/repository/repository.module';
     OrganizationModule,
     TribeModule,
     DatabaseModule,
-    RepositoryModule
+    RepositoryModule,
+    MetricModule
   ],
   controllers: [AppController],
   providers: [AppService],

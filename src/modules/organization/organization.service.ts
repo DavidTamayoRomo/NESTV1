@@ -1,5 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
+
+import { MessageValues } from '../../constants/MessageValues';
 import { Organization } from './organization.entity';
 import { Repository } from 'typeorm';
 import { plainToInstance } from 'class-transformer';
@@ -8,7 +10,6 @@ import { CreatedOrganizationDto } from './dto/create-organization.dto';
 import { UpdateOrganizationDto } from './dto/update-organization.dto';
 import { iif, mergeMap, Observable, of, map, throwError } from 'rxjs';
 import { isEmpty } from 'lodash';
-import { MessageValues } from 'src/constansts/MessageValues';
 
 @Injectable()
 export class OrganizationService {
@@ -75,7 +76,7 @@ export class OrganizationService {
     );
   }
 
-  deleteItemById(id_organization: any): Observable<GetAllOrganizationDto[]> {
+  deleteItemById(id_organization: number): Observable<GetAllOrganizationDto[]> {
     return of(1).pipe(
       mergeMap(() => this._organizationRepository.findOne({ id_organization })),
       mergeMap((organization: Organization) =>

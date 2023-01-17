@@ -8,6 +8,7 @@ import {
   OneToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+import { Metric } from '../metric/metric.entity';
 import { Tribe } from '../tribe/tribe.entity';
 
 @Entity('repositories')
@@ -19,6 +20,8 @@ export class Repository extends BaseEntity {
   @JoinColumn({ name: 'id_tribe' })
   'tribe': Tribe;
 
+  @OneToOne(() => Metric, (metrics) => metrics.repository, { eager: true })
+  'metrics': Metric[];
 
   @Column({
     length: 50,
