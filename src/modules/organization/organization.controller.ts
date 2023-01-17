@@ -32,7 +32,7 @@ export class OrganizationController {
     return of(1).pipe(mergeMap(() => this._organizationService.getAllItems()));
   }
 
-  @Post('created')
+  @Post()
   createOrganization(
     @Body() organization: CreatedOrganizationDto,
   ): Observable<GetAllOrganizationDto> {

@@ -27,9 +27,15 @@
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/typeorm": "^9.0.1",
     "axios": "^1.2.2",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
     "json2csv": "^5.0.7",
+    "lodash": "^4.17.20",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "ts-mapper": "^1.2.4",
     "typeorm": "^0.3.11"
   },
   "devDependencies": {

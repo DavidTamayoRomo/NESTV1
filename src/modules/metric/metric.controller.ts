@@ -13,7 +13,7 @@ export class MetricController {
     return of(1).pipe(mergeMap(() => this._metricService.getAllItems()));
   }
 
-  @Post('created')
+  @Post()
   createMetric(@Body() metric: CreateMetricDto): Observable<GetAllMetricDto> {
     return of(1).pipe(mergeMap(() => this._metricService.createItem(metric)));
   }

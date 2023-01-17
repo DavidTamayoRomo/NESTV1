@@ -40,7 +40,7 @@ export class RepositoryController {
     return of(1).pipe(mergeMap(() => this._repositoryService.getAllItems()));
   }
 
-  @Post('created')
+  @Post()
   createRepository(
     @Body() repository: CreateRepositoryDto,
   ): Observable<GetAllRepositoryDto> {

@@ -13,7 +13,7 @@ export class TribeController {
     return of(1).pipe(mergeMap(() => this._tribeService.getAllItems()));
   }
 
-  @Post('created')
+  @Post()
   createTribe(@Body() tribe: CreateTribeDto): Observable<GetAllTribeDto> {
     return of(1).pipe(mergeMap(() => this._tribeService.createItem(tribe)));
   }
