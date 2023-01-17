@@ -6,7 +6,6 @@ import { isEmpty, get, set, isUndefined, isEqual } from 'lodash';
 import { parseAsync } from 'json2csv';
 
 import { Repository } from './repository.entity';
-import { MessageValues } from '../../constants/MessageValues';
 import { GetAllRepositoryDto } from './dto/get-all-repository.dto';
 import { CreateRepositoryDto } from './dto/create-repository.dto';
 import { UpdateRepositoryDto } from './dto/update-repository.dto';
@@ -25,16 +24,17 @@ import {
   concatMap,
 } from 'rxjs';
 import { Tribe } from '../tribe/tribe.entity';
-import { MetricsValues } from '../../constants/MetricsValues';
+import { MetricsValues } from 'src/constansts/MetricsValues';
 import {
   RepositoryEnum,
   RepositoryStateValueEnum,
   RepositoryValueEnum,
-} from '../../constants/RepositoryEnums';
+} from 'src/constansts/RepositoryEnums';
 
-import { RETENTION_CSV_FILE_COLUMNS_EMAIL } from '../../constants/FileColumnsValues';
-import { ConfigService } from '../../config/config.service';
-import { Configuration } from '../../config/config.keys';
+import { RETENTION_CSV_FILE_COLUMNS_EMAIL } from 'src/constansts/FileColumnsValues';
+import { ConfigService } from 'src/config/config.service';
+import { Configuration } from 'src/config/config.key';
+import { MessageValues } from 'src/constansts/MessageValues';
 
 @Injectable()
 export class RepositoryService {
