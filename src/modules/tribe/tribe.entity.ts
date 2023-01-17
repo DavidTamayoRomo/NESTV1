@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Organization } from '../organization/organization.entity';
+import { Repository } from '../repository/repository.entity';
 
 @Entity('tribes')
 export class Tribe extends BaseEntity {
@@ -18,7 +19,10 @@ export class Tribe extends BaseEntity {
   })
   'organization': Organization;
 
-
+  @OneToMany(() => Repository, (repository) => repository.tribe, {
+    eager: false,
+  })
+  'repository': Repository[];
 
   @Column({
     length: 50,

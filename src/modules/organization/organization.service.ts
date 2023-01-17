@@ -2,7 +2,7 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Organization } from './organization.entity';
 import { Repository } from 'typeorm';
-import { plainToInstance } from '@nestjs/class-transformer';
+import { plainToInstance } from 'class-transformer';
 import { GetAllOrganizationDto } from './dto/get-all-organization.dto';
 import { CreatedOrganizationDto } from './dto/create-organization.dto';
 import { UpdateOrganizationDto } from './dto/update-organization.dto';
