@@ -24,15 +24,15 @@ import {
   concatMap,
 } from 'rxjs';
 import { Tribe } from '../tribe/tribe.entity';
-import { MetricsValues } from 'src/constansts/MetricsValues';
+import { MetricsValues } from '../../constansts/MetricsValues';
 import {
   RepositoryEnum,
   RepositoryStateValueEnum,
   RepositoryValueEnum,
-} from 'src/constansts/RepositoryEnums';
+} from '../../constansts/RepositoryEnums';
 
-import { RETENTION_CSV_FILE_COLUMNS_EMAIL } from 'src/constansts/FileColumnsValues';
-import { MessageValues } from 'src/constansts/MessageValues';
+import { RETENTION_CSV_FILE_COLUMNS_EMAIL } from '../../constansts/FileColumnsValues';
+import { MessageValues } from '../../constansts/MessageValues';
 
 @Injectable()
 export class RepositoryService {

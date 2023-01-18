@@ -8,7 +8,7 @@ import { CreateTribeDto } from './dto/create-tribe.dto';
 import { iif, map, mergeMap, Observable, of, throwError } from 'rxjs';
 import { isEmpty, set } from 'lodash';
 import { Organization } from '../organization/organization.entity';
-import { MessageValues } from 'src/constansts/MessageValues';
+import { MessageValues } from '../../constansts/MessageValues';
 
 @Injectable()
 export class TribeService {

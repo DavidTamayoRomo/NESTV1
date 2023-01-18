@@ -1,5 +1,5 @@
 import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { Organization } from 'src/modules/organization/organization.entity';
+import { Organization } from '../modules/organization/organization.entity';
 
 export const databaseProviders = [
     TypeOrmModule.forRootAsync({

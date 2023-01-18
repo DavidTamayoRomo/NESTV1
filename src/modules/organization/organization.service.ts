@@ -10,7 +10,7 @@ import { CreatedOrganizationDto } from './dto/create-organization.dto';
 import { UpdateOrganizationDto } from './dto/update-organization.dto';
 import { iif, mergeMap, Observable, of, map, throwError } from 'rxjs';
 import { isEmpty } from 'lodash';
-import { MessageValues } from 'src/constansts/MessageValues';
+import { MessageValues } from '../../constansts/MessageValues';
 
 @Injectable()
 export class OrganizationService {

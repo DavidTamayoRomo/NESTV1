@@ -1,6 +1,6 @@
 import { IsNotEmpty, IsNumber, IsString, MaxLength } from 'class-validator';
 import { Exclude, Expose } from 'class-transformer';
-import { MessageValues } from 'src/constansts/MessageValues';
+import { MessageValues } from '../../../constansts/MessageValues';
 
 @Exclude()
 export class GetAllOrganizationDto {

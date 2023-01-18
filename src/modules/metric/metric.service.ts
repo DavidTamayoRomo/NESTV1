@@ -8,7 +8,7 @@ import { Metric } from './metric.entity';
 import { Observable, of, mergeMap, map, throwError, iif } from 'rxjs';
 import { Repository } from '../repository/repository.entity';
 import { isEmpty } from 'lodash';
-import { MessageValues } from 'src/constansts/MessageValues';
+import { MessageValues } from '../../constansts/MessageValues';
 
 @Injectable()
 export class MetricService {
