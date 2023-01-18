@@ -32,8 +32,6 @@ import {
 } from 'src/constansts/RepositoryEnums';
 
 import { RETENTION_CSV_FILE_COLUMNS_EMAIL } from 'src/constansts/FileColumnsValues';
-import { ConfigService } from 'src/config/config.service';
-import { Configuration } from 'src/config/config.key';
 import { MessageValues } from 'src/constansts/MessageValues';
 
 @Injectable()
@@ -208,9 +206,7 @@ export class RepositoryService {
   }
 
   private _getValueStatusCode(): Observable<object[]> {
-    const mock_api_url: string = new ConfigService().get(
-      Configuration.MOCK_API_URL,
-    );
+    const mock_api_url: string = process.env.MOCK_API_URL;
 
     return of(1).pipe(
       mergeMap(() => axios(mock_api_url)),
