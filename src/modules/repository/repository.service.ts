@@ -206,7 +206,7 @@ export class RepositoryService {
   }
 
   private _getValueStatusCode(): Observable<object[]> {
-    const mock_api_url: string = process.env.MOCK_API_URL;
+    const mock_api_url: string = "http://demo9839251.mockable.io/repositories/state";
 
     return of(1).pipe(
       mergeMap(() => axios(mock_api_url)),

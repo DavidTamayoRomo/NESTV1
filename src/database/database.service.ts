@@ -4,13 +4,13 @@ import { Organization } from '../modules/organization/organization.entity';
 export const databaseProviders = [
     TypeOrmModule.forRootAsync({
       async useFactory() {
-        const dbUrl = new URL(process.env.DATABASE_URL);
+        const dbUrl = new URL("postgresql://david:kgAp720fQbD7PygE54gQAQ@arrow-dreamer-3139.g8z.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full");
         const routingId = dbUrl.searchParams.get('options');
         dbUrl.searchParams.delete('options');
   
         return {
           ssl: true,
-          type: process.env.DATABASE as 'cockroachdb',
+          type: "cockroachdb",
           url: dbUrl.toString(),
           synchronize: false,
           migrationsRun: true,
@@ -20,6 +20,7 @@ export const databaseProviders = [
           autoLoadEntities: true,
           dropSchema: false,
           entities: [Organization],
+          migrations: ['./migrations/*{.ts,.js}'],
         } as TypeOrmModuleOptions;
       },
     }),
